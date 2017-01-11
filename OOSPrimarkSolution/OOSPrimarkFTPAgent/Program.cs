@@ -1,5 +1,6 @@
 ﻿/*
  * [2017-01-11] 将项目添加到 Git 源代码管理工具上。
+ * [2017-01-11-2] 修改Log
  */
 using OOSCommon;
 using OOSLibrary.PrimarkOriginDB.Business;
@@ -25,6 +26,7 @@ namespace OOSPrimarkFTPAgent
             }
 
             StringWriter sw = new StringWriter();
+            sw.WriteLine("程序开始启动。。。" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
 
             string MailSendFrom = System.Configuration.ConfigurationManager.AppSettings["MailFromAddress"];
             string MailSendTo = System.Configuration.ConfigurationManager.AppSettings["MailSendToAddress"];
