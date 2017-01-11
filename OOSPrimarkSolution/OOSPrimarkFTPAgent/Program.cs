@@ -1,4 +1,7 @@
-﻿using OOSCommon;
+﻿/*
+ * [2017-01-11] 将项目添加到 Git 源代码管理工具上。
+ */
+using OOSCommon;
 using OOSLibrary.PrimarkOriginDB.Business;
 using System;
 using System.Collections;
@@ -50,6 +53,8 @@ namespace OOSPrimarkFTPAgent
 
             //    return;
             //}
+
+            //[2017-01-11] test
 
             string PATH = System.Configuration.ConfigurationManager.AppSettings["LogPath"] + DateTime.Now.ToString("yyyy-MM-dd") + @"\";
             string FTPserver = System.Configuration.ConfigurationManager.AppSettings["FTPserver"];
