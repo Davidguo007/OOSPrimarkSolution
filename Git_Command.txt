@@ -1,0 +1,18 @@
+git config --global user.name "David007"
+git config --global user.email "aaa@qq.com"
+cd I:\Git_VS
+pwd
+dir
+git init
+
+git add mytest.txt
+git commit -m "提交备注"
+git status
+
+git diff 文件名        注：区分大小写
+
+git log
+git log --pretty=oneline
+
+git reset --hard Head^
+git reset --hard Head~10
