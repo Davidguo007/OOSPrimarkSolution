@@ -18,3 +18,12 @@ git log --pretty=oneline
 
 git reset --hard Head^
 git reset --hard Head~10
+
+git reflog		note: show the all check in history.
+git reset --hard Version	note:back to the specific version.
+
+cat Git_command.txt	显示对象中的内容。
+
+rm b.txt
+git checkout --文件名  恢复文件
+
