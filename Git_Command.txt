@@ -30,3 +30,7 @@ git checkout --文件名  恢复文件
 将本地项目同步到远程
 git remote add origin git@github.com:Davidguo007/OOSPrimarkSolution.git
 git push -u origin master
+
+
+git clone https://github.com/Davidguo007/OOSPrimarkSolution.git
+git pull
