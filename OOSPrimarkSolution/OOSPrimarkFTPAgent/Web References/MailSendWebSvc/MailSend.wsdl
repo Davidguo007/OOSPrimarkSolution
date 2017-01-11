@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="OOSCRMSendEmailTest">
+        <s:complexType />
+      </s:element>
+      <s:element name="OOSCRMSendEmailTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OOSCRMSendEmailTestResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsBodyHtml" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="mailBody" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendMessageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessageMultiCC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ccAddrList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsBodyHtml" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="mailBody" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendMessageMultiCCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendMessageMultiCCResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessageMultiCCAttach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ccAddrList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsBodyHtml" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="mailBody" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_AttachList" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessageMultiCCAttachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendMessageMultiCCAttachResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessageMultiCCAttachSplitStr">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_ccAddrList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsBodyHtml" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="mailBody" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_AttachList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessageMultiCCAttachSplitStrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendMessageMultiCCAttachSplitStrResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="OOSCRMSendEmailTestSoapIn">
+    <wsdl:part name="parameters" element="tns:OOSCRMSendEmailTest" />
+  </wsdl:message>
+  <wsdl:message name="OOSCRMSendEmailTestSoapOut">
+    <wsdl:part name="parameters" element="tns:OOSCRMSendEmailTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMessage" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageMultiCCSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMessageMultiCC" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageMultiCCSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMessageMultiCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageMultiCCAttachSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMessageMultiCCAttach" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageMultiCCAttachSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMessageMultiCCAttachResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageMultiCCAttachSplitStrSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMessageMultiCCAttachSplitStr" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageMultiCCAttachSplitStrSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMessageMultiCCAttachSplitStrResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MailSendSoap">
+    <wsdl:operation name="OOSCRMSendEmailTest">
+      <wsdl:input message="tns:OOSCRMSendEmailTestSoapIn" />
+      <wsdl:output message="tns:OOSCRMSendEmailTestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <wsdl:input message="tns:SendMessageSoapIn" />
+      <wsdl:output message="tns:SendMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageMultiCC">
+      <wsdl:input message="tns:SendMessageMultiCCSoapIn" />
+      <wsdl:output message="tns:SendMessageMultiCCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageMultiCCAttach">
+      <wsdl:input message="tns:SendMessageMultiCCAttachSoapIn" />
+      <wsdl:output message="tns:SendMessageMultiCCAttachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageMultiCCAttachSplitStr">
+      <wsdl:input message="tns:SendMessageMultiCCAttachSplitStrSoapIn" />
+      <wsdl:output message="tns:SendMessageMultiCCAttachSplitStrSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MailSendSoap" type="tns:MailSendSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="OOSCRMSendEmailTest">
+      <soap:operation soapAction="http://tempuri.org/OOSCRMSendEmailTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <soap:operation soapAction="http://tempuri.org/SendMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageMultiCC">
+      <soap:operation soapAction="http://tempuri.org/SendMessageMultiCC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageMultiCCAttach">
+      <soap:operation soapAction="http://tempuri.org/SendMessageMultiCCAttach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageMultiCCAttachSplitStr">
+      <soap:operation soapAction="http://tempuri.org/SendMessageMultiCCAttachSplitStr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MailSendSoap12" type="tns:MailSendSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="OOSCRMSendEmailTest">
+      <soap12:operation soapAction="http://tempuri.org/OOSCRMSendEmailTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <soap12:operation soapAction="http://tempuri.org/SendMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageMultiCC">
+      <soap12:operation soapAction="http://tempuri.org/SendMessageMultiCC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageMultiCCAttach">
+      <soap12:operation soapAction="http://tempuri.org/SendMessageMultiCCAttach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageMultiCCAttachSplitStr">
+      <soap12:operation soapAction="http://tempuri.org/SendMessageMultiCCAttachSplitStr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MailSend">
+    <wsdl:port name="MailSendSoap" binding="tns:MailSendSoap">
+      <soap:address location="http://192.168.3.89:999/MailSend.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MailSendSoap12" binding="tns:MailSendSoap12">
+      <soap12:address location="http://192.168.3.89:999/MailSend.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

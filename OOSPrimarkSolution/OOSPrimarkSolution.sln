@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOSPrimarkFTPAgent", "OOSPrimarkFTPAgent\OOSPrimarkFTPAgent.csproj", "{30E7C7EE-AA79-4B8A-847F-52171A287F04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{44850D1B-8D89-4DA1-B66D-6E072FFE2229}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOSCommon", "OOSCommon\OOSCommon.csproj", "{79C391D2-85BD-4628-99F5-D9FF4004BB6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOSDataCore", "OOSDataCore\OOSDataCore.csproj", "{43024E0A-82BA-44AD-9A20-FE8822B84B5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOSLibrary.PrimarkOriginDB", "OOSLibrary.PrimarkOriginDB\OOSLibrary.PrimarkOriginDB.csproj", "{543D466C-6F32-48F0-9A3D-EFC3D618600C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOSPrimarkWeb", "OOSPrimarkWeb\OOSPrimarkWeb.csproj", "{3B98F785-1650-4AEB-ACBF-3CDE669AECAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30E7C7EE-AA79-4B8A-847F-52171A287F04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30E7C7EE-AA79-4B8A-847F-52171A287F04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30E7C7EE-AA79-4B8A-847F-52171A287F04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30E7C7EE-AA79-4B8A-847F-52171A287F04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79C391D2-85BD-4628-99F5-D9FF4004BB6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79C391D2-85BD-4628-99F5-D9FF4004BB6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79C391D2-85BD-4628-99F5-D9FF4004BB6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79C391D2-85BD-4628-99F5-D9FF4004BB6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43024E0A-82BA-44AD-9A20-FE8822B84B5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43024E0A-82BA-44AD-9A20-FE8822B84B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43024E0A-82BA-44AD-9A20-FE8822B84B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43024E0A-82BA-44AD-9A20-FE8822B84B5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{543D466C-6F32-48F0-9A3D-EFC3D618600C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{543D466C-6F32-48F0-9A3D-EFC3D618600C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{543D466C-6F32-48F0-9A3D-EFC3D618600C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{543D466C-6F32-48F0-9A3D-EFC3D618600C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B98F785-1650-4AEB-ACBF-3CDE669AECAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B98F785-1650-4AEB-ACBF-3CDE669AECAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B98F785-1650-4AEB-ACBF-3CDE669AECAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B98F785-1650-4AEB-ACBF-3CDE669AECAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{79C391D2-85BD-4628-99F5-D9FF4004BB6F} = {44850D1B-8D89-4DA1-B66D-6E072FFE2229}
+		{43024E0A-82BA-44AD-9A20-FE8822B84B5A} = {44850D1B-8D89-4DA1-B66D-6E072FFE2229}
+		{543D466C-6F32-48F0-9A3D-EFC3D618600C} = {44850D1B-8D89-4DA1-B66D-6E072FFE2229}
+	EndGlobalSection
+EndGlobal
