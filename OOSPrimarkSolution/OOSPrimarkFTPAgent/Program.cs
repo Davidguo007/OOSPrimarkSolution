@@ -5,6 +5,7 @@
  * [2017-01-11-3] 修改Log
  * [2017-01-11-4] 修改Log
  * [2017-01-12-1] Edit at Master
+ * [2017-01-12-2] Edit at Dev
  */
 using OOSCommon;
 using OOSLibrary.PrimarkOriginDB.Business;
